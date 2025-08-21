@@ -173,6 +173,11 @@ console.log(`Comparisons too: ${5 > 3}`)
 console.log(`Just a regular sting...`)
 
 const myName = "Hajj"; // Your name
-const myAge = 0; // Your age
-const myJob = ""; // Your job/student status
-const currentYear = 2024;
+const myAge = 20; // Your age
+const myJob = "3rd year student"; // Your job/student status
+const currentYear = 2025;
+
+console.log(`Hi, I'm ${myName}, a ${myAge} years old, and I am a ${myJob}. The current year is ${currentYear}.`);
+
+let Pagkabuhay = currentYear - myAge
+console.log(`Born in ${Pagkabuhay}, 10*5 = ${10 * 5 }, Adult: ${myAge >= 18}`);
