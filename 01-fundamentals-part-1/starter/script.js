@@ -235,3 +235,18 @@ if (testScore >= 90) {
   console.log("Failed! Grade F");
 }
 
+
+/// Exercise 2 
+
+const userAge = 12; 
+
+if (userAge >= 18) {
+  console.log("Welcome! You can access all content.");
+} else if (userAge >= 13 && userAge <= 17) {
+  console.log("Welcome! Restricted content only.");
+} else {
+  console.log("Sorry, you are too young to access this content.");
+}
+
+
+
