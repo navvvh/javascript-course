@@ -302,3 +302,66 @@ if (BMIMark > BMIJohn) {
   console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 } 
 
+
+const inputYear = "1991";
+console.log(Number(inputYear), inputYear); 
+console.log(Number(inputYear) + 18); 
+
+console.log(Number("Jonas")); 
+console.log(typeof NaN); 
+
+console.log(String(23), 23);
+console.log(typeof String(23)); 
+
+
+console.log("I am " + 23 + " years old"); 
+console.log("23" - "10" - 3); 
+console.log("23" / "2"); 
+console.log("23" * "2");
+
+let n = "1" + 1; 
+n = n - 1; 
+console.log(n);
+
+console.log(2 + 3 + 4 + "5");
+console.log("10" - "4" - "3" - 2 + "5");
+
+
+// Predict the output, then test:
+console.log("5" + 2); 
+console.log("5" - 2); 
+console.log("5" * 2); 
+console.log("5" / 2); 
+
+// Convert these explicitly:
+const userEdad = "25"; 
+const userAgeNumber = Number(userEdad); 
+
+const userScore = 95;
+const userScoreString = String(userScore); 
+
+console.log(typeof userAgeNumber, userAgeNumber);   
+console.log(typeof userScoreString, userScoreString);
+
+
+const prompt = require("prompt-sync")();
+
+// This calculator has a bug - fixed!
+const num1 = prompt("First number:"); // Returns string!
+const num2 = prompt("Second number:"); // Returns string!
+
+
+const sum = Number(num1) + Number(num2); 
+
+console.log(`Sum: ${sum}`);
+
+const age = "18";
+if (age === 18) console.log("You just became an adult :D (strict)");
+if (age == 18) console.log("You just became an adult :D (loose)");
+
+// Let's see what happens:
+console.log("18" === 18); // false - different types
+console.log("18" == 18); // true - coercion happens
+console.log(18 === 18); 
+
+
