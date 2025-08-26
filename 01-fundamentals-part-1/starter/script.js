@@ -248,5 +248,42 @@ if (userAge >= 18) {
   console.log("Sorry, you are too young to access this content.");
 }
 
+///truthy and Falsy Values
+
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean("Jonas")); // true
+console.log(Boolean({})); // true (empty object)
+console.log(Boolean("")); // false (empty string)
+
+const money = 0;
+if (money) {
+  console.log("Don't spend it all ;)");
+} else {
+  console.log("You should get a job!");
+}
+
+let height = 0; // This is a valid height!
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("Height is UNDEFINED"); 
+}
+
+
+if (height !== undefined) {
+  console.log("Height is defined");
+}
+
+
+const values = [0, 1, "", "hello", undefined, null, NaN, {}, []];
+
+console.log("Value:", 0);
+console.log("Boolean:", Boolean(0));
+if (0) {
+  console.log("Truthy!");
+} else {
+  console.log("Falsy!");
+}
 
 
