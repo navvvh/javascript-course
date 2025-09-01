@@ -211,39 +211,53 @@ const grades3 = [78, 85, 92, 67, 88, 95, 73, 82];
 
 // Function to calculate average
 function calculateAverage(grades3) {
-
     let total = 0 
-
   // Your code here
   // Hint: Sum all grades, divide by length
   for (let i = 0; i < grades3.length; i++) {
     total += grades3[i]
   }
-
   console.log(`Sum of all grades: ${total}`)
-  
   const average = total / grades3.length
   console.log(average)
 }
-
-
 
 // Function to find highest grade
 function findHighestGrade(grades3) {
   // Your code here
   // Hint: Start with first grade, compare with each subsequent grade
+  let highest = grades3[0];
+  for (let i = 1; i < grades3.length; i++) {
+    if (grades3[i] > highest) {
+      highest = grades3[i];
+    }
+  }
+  console.log(`Highest grade is: ${highest}`);
 }
 
 // Function to find lowest grade
 function findLowestGrade(grades3) {
   // Your code here
   // Hint: Similar to highest, but use < comparison
+  let loweest = grades3[0];
+  for (let i = 1; i < grades3.length; i++) {
+    if (loweest > grades3[i]){
+      loweest = grades3[i];
+    }
+  }
+  console.log(`Lowest grade is: ${loweest}`);
 }
-
 // Function to count passing students
 function countPassing(grades3, passingGrade) {
   // Your code here
   // Hint: Counter pattern - increment when condition is met
+  let passingCount = 0;
+  for (let i = 0; i < grades3.length; i++) {
+     if (grades3[i] >= passingGrade) {
+      passingCount++;
+     }    
+  }
+  console.log(`Number of passing students: ${passingCount} out of ${grades3.length}`);
 }
 
 // Generate complete report
