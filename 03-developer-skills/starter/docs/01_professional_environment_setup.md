@@ -102,24 +102,24 @@ Let's start by creating some intentionally messy code that we'll improve through
 
 ```javascript
 // Remember, we're gonna use strict mode in all scripts now!
-"use strict";
+'use strict';
 
 ////////////////////////////////////
 // Professional Development Environment Setup
 
-console.log("=== DEVELOPMENT ENVIRONMENT SETUP ===");
+console.log('=== DEVELOPMENT ENVIRONMENT SETUP ===');
 
 // Create some messy code - don't worry about formatting yet
 const messyExample = function (name, age) {
   if (age >= 18) {
-    return "Hello " + name + ", you are an adult";
+    return 'Hello ' + name + ', you are an adult';
   } else {
-    return "Hello " + name + ", you are a minor";
+    return 'Hello ' + name + ', you are a minor';
   }
 };
 
-console.log("Current messy code example:", messyExample("John", 25));
-console.log("Goal: Automatic formatting, auto-refresh, and typing shortcuts");
+console.log('Current messy code example:', messyExample('John', 25));
+console.log('Goal: Automatic formatting, auto-refresh, and typing shortcuts');
 ```
 
 **Verify it works:**
@@ -170,12 +170,12 @@ Add this code to verify your extensions are working:
 
 function testExtensions() {
   const extensionTests = [
-    { name: "Prettier", status: "installed", purpose: "code formatting" },
-    { name: "Live Server", status: "installed", purpose: "auto refresh" },
+    { name: 'Prettier', status: 'installed', purpose: 'code formatting' },
+    { name: 'Live Server', status: 'installed', purpose: 'auto refresh' },
     {
-      name: "Auto Rename Tag",
-      status: "installed",
-      purpose: "HTML efficiency",
+      name: 'Auto Rename Tag',
+      status: 'installed',
+      purpose: 'HTML efficiency',
     },
   ];
 
@@ -183,7 +183,7 @@ function testExtensions() {
 }
 
 const extensionStatus = testExtensions();
-console.log("Extension installation status:", extensionStatus);
+console.log('Extension installation status:', extensionStatus);
 ```
 
 **✅ Checkpoint:** All extensions show "Enabled" in Extensions panel, and you see "Go Live" in the status bar.
@@ -235,9 +235,9 @@ Go back to your `script.js` file and add this messy code:
 
 // This code has terrible formatting - Prettier will fix it!
 const prettierTest = {
-  firstName: "Sarah",
-  lastName: "Johnson",
-  skills: ["JavaScript", "React", "Node.js"],
+  firstName: 'Sarah',
+  lastName: 'Johnson',
+  skills: ['JavaScript', 'React', 'Node.js'],
   isActive: true,
 };
 
@@ -249,14 +249,14 @@ const messyFunction = function (x, y, z) {
   }
 };
 
-const messyArrow = (items) => {
-  return items.map((item) => {
+const messyArrow = items => {
+  return items.map(item => {
     return item.toUpperCase();
   });
 };
 
 console.log(
-  "Before Prettier formatting - this code works but looks unprofessional"
+  'Before Prettier formatting - this code works but looks unprofessional'
 );
 ```
 
@@ -271,10 +271,10 @@ Create this messy code and watch Prettier format it automatically:
 ```javascript
 // Create this with terrible formatting:
 const studentTest = {
-  firstName: "your-name",
-  skills: ["HTML", "CSS", "JavaScript"],
-  experience: "beginner",
-  goals: ["become-developer", "build-projects"],
+  firstName: 'your-name',
+  skills: ['HTML', 'CSS', 'JavaScript'],
+  experience: 'beginner',
+  goals: ['become-developer', 'build-projects'],
 };
 
 const testFunc = function (data) {
@@ -321,8 +321,8 @@ Add this code to test automatic browser updates:
 // Live Server Testing
 
 // Test 1: Basic live reload
-let liveServerTest = "Initial message - change #1";
-console.log("Live Server test:", liveServerTest);
+let liveServerTest = 'Initial message - change #1';
+console.log('Live Server test:', liveServerTest);
 
 // Test 2: Time-based updates
 const timeStamp = new Date().toLocaleTimeString();
@@ -332,7 +332,7 @@ console.log(`Live Server update #${updateCount} at ${timeStamp}`);
 
 // Test 3: Function testing
 function demonstrateLiveReload() {
-  const randomColor = ["red", "blue", "green", "purple", "orange"][
+  const randomColor = ['red', 'blue', 'green', 'purple', 'orange'][
     Math.floor(Math.random() * 5)
   ];
   const message = `Live Server rocks! Random color: ${randomColor}`;
@@ -355,7 +355,7 @@ demonstrateLiveReload();
 // Student Exercise: Add this function and test live reload
 function showCurrentTime() {
   const now = new Date().toLocaleTimeString();
-  console.log("Current time:", now);
+  console.log('Current time:', now);
   return now;
 }
 
@@ -411,23 +411,23 @@ Go back to your `script.js` file and test these shortcuts:
 // Code Snippets Testing
 
 // Type 'cl' then press Tab - it should expand to console.log();
-console.log("Testing snippet functionality - cl + Tab created this!");
+console.log('Testing snippet functionality - cl + Tab created this!');
 
 // Type 'func' then press Tab - it should create a function template
 function testSnippets() {
-  console.log("Function created with snippet - func + Tab!");
-  return "Snippets working perfectly!";
+  console.log('Function created with snippet - func + Tab!');
+  return 'Snippets working perfectly!';
 }
 
 testSnippets();
 
 // Type 'arrow' then press Tab - it should create an arrow function template
-const snippetTest = (message) => {
+const snippetTest = message => {
   console.log(`Arrow function from snippet: ${message}`);
   return message;
 };
 
-snippetTest("Snippets save so much typing time!");
+snippetTest('Snippets save so much typing time!');
 ```
 
 **✅ Checkpoint:** Typing `cl` + Tab creates `console.log();`, typing `func` + Tab creates a function template.
@@ -442,12 +442,12 @@ Add this summary to confirm everything is working:
 ////////////////////////////////////
 // Environment Setup Verification
 
-console.log("🎉 Professional Development Environment Complete!");
-console.log("✅ Prettier: Automatic code formatting");
-console.log("✅ Live Server: Automatic browser refresh");
-console.log("✅ Snippets: Fast code generation");
-console.log("✅ Extensions: Enhanced productivity");
-console.log("Ready for professional JavaScript development!");
+console.log('🎉 Professional Development Environment Complete!');
+console.log('✅ Prettier: Automatic code formatting');
+console.log('✅ Live Server: Automatic browser refresh');
+console.log('✅ Snippets: Fast code generation');
+console.log('✅ Extensions: Enhanced productivity');
+console.log('Ready for professional JavaScript development!');
 
 // Calculate time savings
 function calculateTimeSavings() {
