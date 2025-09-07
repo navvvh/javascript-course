@@ -600,9 +600,29 @@ heading.style.fontSize = "3rem";
 
 const button = document.querySelector("#btn");
 button.style.borderRadius = "10px";
-button.style.border = "none";
 button.style.padding = "10px 20px";
-button.style.backgroundColor = "green";
-button.style.color = "white";
 button.style.fontSize = "1.5rem";
+
+
+// event listeners and handlers
+button.addEventListener("click", function() {
+    console.log("Button clicked!");
+    message.style.color = "green";
+});
+
+let clickCount = 0;
+button.addEventListener("click", function() {
+    clickCount++;
+    button.textContent = `Clicked ${clickCount} times`;
+    button.style.backgroundColor = `hsl(${clickCount * 20}, 70%, 50%)`;
+});
+
+const display = document.querySelector(".message");
+
+input.addEventListener("input", function() {
+  const userText = input.value;
+  display.textContent = `You typed: ${userText}`;
+  display.style.fontSize = `${userText.length + 10}px`;
+});
+
 
