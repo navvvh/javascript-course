@@ -100,3 +100,58 @@ function demonstrateLiveReload() {
 }
 
 demonstrateLiveReload();
+
+
+function showCurrentTime() {
+  const now = new Date().toLocaleTimeString();
+  console.log('Current time:', now);
+  return now;
+}
+
+showCurrentTime();
+
+// Code Snippets Testing
+
+// Type 'cl' then press Tab - it should expand to console.log();
+console.log('Testing snippet functionality - cl + Tab created this!');
+
+// Type 'func' then press Tab - it should create a function template
+function testSnippets() {
+  console.log('Function created with snippet - func + Tab!');
+  return 'Snippets working perfectly!';
+}
+
+testSnippets();
+
+// Type 'arrow' then press Tab - it should create an arrow function template
+const snippetTest = message => {
+  console.log(`Arrow function from snippet: ${message}`);
+  return message;
+};
+
+snippetTest('Snippets save so much typing time!');
+
+// Environment Setup Verification
+
+console.log('🎉 Professional Development Environment Complete!');
+console.log('✅ Prettier: Automatic code formatting');
+console.log('✅ Live Server: Automatic browser refresh');
+console.log('✅ Snippets: Fast code generation');
+console.log('✅ Extensions: Enhanced productivity');
+console.log('Ready for professional JavaScript development!');
+
+// Calculate time savings
+function calculateTimeSavings() {
+  const dailyConsoleLogs = 50;
+  const keystrokesSavedPerLog = 11; // 'console.log()' vs 'cl' + Tab
+  const dailySavings = dailyConsoleLogs * keystrokesSavedPerLog;
+  const monthlySavings = dailySavings * 22; // work days
+
+  console.log(`Daily keystrokes saved: ${dailySavings}`);
+  console.log(`Monthly keystrokes saved: ${monthlySavings}`);
+
+  return { daily: dailySavings, monthly: monthlySavings };
+}
+
+calculateTimeSavings();
+
