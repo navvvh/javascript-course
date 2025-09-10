@@ -58,9 +58,20 @@ console.log('Game state initialized!');
 // Basic game logic 
 
 document.querySelector('.check') .addEventListener('click', function () {
-    console.log('checl button clicked!');
+    console.log('check button clicked!');
     const guess = Number(document.querySelector('.guess').value);
     console.log('Player guessed:' , guess)
+
+    //check if out guess is empty
+    if (!guess) {
+        document.querySelector('.message') .textContent = "Please input a number!";
+        return;
+    }
+
+    if (guess < 1 || guess > 20) {
+        document.querySelector('.message') .textContent = 'Number must be 1 and 20!';
+        return;
+    }
 
     if (guess === secretNumber) {
         console.log('Correct guess!')
@@ -72,18 +83,26 @@ document.querySelector('.check') .addEventListener('click', function () {
             document.querySelector('.highscore') .textContent = highscore;
         }
         document.querySelector('.message') .textContent = "You have won!!";
-        if (score < 1 ) {
-            document.querySelector('.message') .textContent = 'You have lost, Press again'
-            document.querySelector('.number') .textContent = secretNumber;
-            document.querySelector('.guess') .disabled = true
-            document.querySelector('.check') .disabled = true
-        }
+        document.body.style.backgroundColor = 'green'
 
     } else if (guess > secretNumber) {
         console.log('Too high!');
         document.querySelector('.message') .textContent = 'Too High NAKO!';
         score--;
         document.querySelector('.score') .textContent = score;
+        document.querySelector('.message').textContent = '💀 Game Over!';
+            document.querySelector('.guess').value = '';
+        
+
+        if (score < 1 ) {
+            document.querySelector('.message') .textContent = 'You have lost, Press again'
+            document.querySelector('.number') .textContent = secretNumber;
+            document.querySelector('.guess') .disabled = true;
+            document.querySelector('.check') .disabled = true;
+            document.body.style.backgroundColor = 'maroon'
+            document.querySelector('.message').textContent = '💀 Game Over!';
+            document.querySelector('.guess').value = '';
+        }
 
     } else if (guess < secretNumber) {
         console.log('Too Low');
@@ -96,6 +115,7 @@ document.querySelector('.check') .addEventListener('click', function () {
             document.querySelector('.number') .textContent = secretNumber;
             document.querySelector('.guess') .disabled = true;
             document.querySelector('.check') .disabled = true;
+            document.body.style.backgroundColor = 'maroon'
         }
     }
 });
@@ -111,11 +131,12 @@ document.querySelector('.again') .addEventListener ('click', function (){
 
     document.querySelector('.guess') .disable = false;
     document.querySelector('.check') .disable = false;
+    document.body.style.backgroundColor = 'blue'
 });
 
 
 
 
-    
+
 
 
